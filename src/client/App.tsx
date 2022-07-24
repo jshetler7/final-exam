@@ -5,6 +5,9 @@ import Navbar from './components/navbar';
 import Home from '../client/views/Home';
 import Books from './views/Books';
 
+import Login from './views/Login';
+import Register from './views/Register';
+
 
 const App = () => {
 
@@ -15,6 +18,9 @@ const App = () => {
 				<Routes>
 					<Route path='/' element={<Home />}/>
 					<Route path='/books' element={<Books />}/>
+
+					<Route path='/login' element={<Login />}/>
+					<Route path='/register' element={<Register />}/>
 				</Routes>
 		</BrowserRouter>
 	);
