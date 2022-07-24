@@ -1,14 +1,22 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/navbar';
+import Home from '../client/views/Home';
+import Books from './views/Books';
 
 
 const App = () => {
 
 
 	return (
-		<main className="container my-5">
-			<h1 className="text-primary text-center">Hello !</h1>
-		</main>
+		<BrowserRouter>
+			<Navbar />
+				<Routes>
+					<Route path='/' element={<Home />}/>
+					<Route path='/books' element={<Books />}/>
+				</Routes>
+		</BrowserRouter>
 	);
 };
 

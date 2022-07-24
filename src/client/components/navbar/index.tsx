@@ -43,31 +43,31 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={"/collection"} className="nav-link text-light font-italic">
+          <Link to={"/books"} className="nav-link text-light font-italic">
             <i className="fa fa-address-card mr-3 text-light fa-fw"></i>
-            Collection
+            Books
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={"/compose"} className="nav-link text-light font-italic">
+          <Link to={"/books/new"} className="nav-link text-light font-italic">
             <i className="fa fa-cubes mr-3 text-light fa-fw"></i>
-            Compose
+            Add a Book
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={"/donate"} className="nav-link text-light font-italic">
+          <Link to={"/login"} className="nav-link text-light font-italic">
             <i className="fa fa-cubes mr-3 text-light fa-fw"></i>
-            Donate
+            Login
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={"/contact"} className="nav-link text-light font-italic">
+          <Link to={"/register"} className="nav-link text-light font-italic">
             <i className="fa fa-cubes mr-3 text-light fa-fw"></i>
-            Contact
+            Register
           </Link>
         </li>
         <li className="nav-item">
-          <button className="btn btn-light" onClick={handleLogout}>
+          <button className="btn btn-light ms-1 mt-5" onClick={handleLogout}>
             <i className="fa fa-cubes mr-3 fa-fw"></i>
             Logout
           </button>
