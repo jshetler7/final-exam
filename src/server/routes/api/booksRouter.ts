@@ -26,7 +26,7 @@ router.get('/', async(req, res) => {
     }
 });
 
-router.put('/:id', async(req, res) => {
+router.put('/:id', isUser, async(req, res) => {
     try {
         const id = Number(req.params.id);
         const { title, author, price } = req.body;
@@ -38,7 +38,7 @@ router.put('/:id', async(req, res) => {
     }
 });
 
-router.post('/', async(req, res) => {
+router.post('/', isUser, async(req, res) => {
     try {
         const { title, author, price, categoryid } = req.body;
         const results = await db_books.create(title, author, price, categoryid);
@@ -49,7 +49,7 @@ router.post('/', async(req, res) => {
     }
 });
 
-router.delete('/:id', async(req, res) => {
+router.delete('/:id', isUser, async(req, res) => {
     try {
         const id = Number(req.params.id);
         await db_books.destroy(id);
