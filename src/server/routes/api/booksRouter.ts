@@ -1,6 +1,6 @@
 import * as express from 'express';
 import db_books from '../../database/queries/books';
-// import { isUser } from '../../middlewares';
+import { isUser } from '../../middlewares';
 
 const router = express.Router();
 
